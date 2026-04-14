@@ -18,10 +18,10 @@ private API Creation:
 forgeapi create --module-name product --access public --access rbac --field name:str:true:false --field description:str:false:false --field price:float:true:false --field inStock:bool:true:false --field category:str:false:false
 # 2. Start the API(public)
 cd generated/backend
-uvicorn main_public:app --reload --port 8000
+uvicorn generated.backend.main_public:app --reload --port 8000
 2.1 Start the API(private)
 cd generated/backend
-uvicorn main_secure:app --reload --port 8000
+uvicorn generated.backend.main_secure:app --reload --port 8000
 
 # 3. Open docs
 # http://localhost:8000/docs
