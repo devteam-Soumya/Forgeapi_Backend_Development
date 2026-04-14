@@ -1,0 +1,41 @@
+{
+  "module_name": "category",
+  "access_modes": [
+    "public",
+    "rbac"
+  ],
+  "template_keys": [
+    "public_crud_api",
+    "protected_rbac_api"
+  ],
+  "primary_mode": "rbac",
+  "display_route": "/categories",
+  "collection_name": "categories",
+  "auth_enabled": true,
+  "token_required": true,
+  "rbac_enabled": true,
+  "permissions": {
+    "create": "create_category",
+    "read": "read_category"
+  },
+  "fields": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "slug",
+      "type": "str",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "isActive",
+      "type": "bool",
+      "required": true,
+      "unique": false
+    }
+  ]
+}
